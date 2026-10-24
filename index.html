@@ -2,69 +2,65 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#123e32">
 <title>رفيق العمرة | دليل تفاعلي</title>
 <style>
 :root{--forest:#123e32;--green:#226b51;--mint:#e8f1eb;--sand:#d8b66a;--paper:#f7f5ef;--ink:#20312a;--muted:#718078;--line:#dce4dc}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.85}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.9}
 button{font:inherit;cursor:pointer}
-.hero{background:radial-gradient(ellipse at 15% 0%,#2c7258,transparent 45%),linear-gradient(135deg,#0d3027,#174b3a);color:#fff;padding:28px 18px 30px}
-.hero-inner{max-width:1060px;margin:auto}
-.eyebrow{color:#d8c18a;font-size:.8rem;font-weight:700}
-.hero h1{font-size:clamp(1.8rem,5vw,3rem);line-height:1.3;margin:8px 0}
-.hero p{color:#dbe9e1}
-.hero-stats{display:flex;gap:8px;flex-wrap:wrap}
-.stat{border:1px solid #ffffff2b;background:#ffffff0d;border-radius:12px;padding:7px 12px;font-size:.85rem}
-.container{max-width:1060px;margin:auto;padding:18px}
-.progress-card,.main-card,.side-card{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 34px #163c2b12}
-.progress-card{padding:16px}
+button:disabled{opacity:.4;cursor:not-allowed}
+.hero{background:linear-gradient(135deg,#0d3027,#226b51);color:white;padding:28px 18px}
+.hero-inner{max-width:1000px;margin:auto}
+.eyebrow{color:#e7cc8c;font-size:.82rem;font-weight:bold}
+h1{font-size:clamp(2rem,5vw,3rem);margin:8px 0}
+.hero p{color:#e0eee5}
+.container{max-width:1000px;margin:auto;padding:16px}
+.card{background:white;border:1px solid var(--line);border-radius:17px;padding:18px;margin-bottom:14px;box-shadow:0 8px 25px #163c2b0b}
 .progress-head{display:flex;justify-content:space-between;gap:10px}
-.progress-track{height:8px;background:#e9eee9;border-radius:99px;overflow:hidden;margin-top:11px}
-.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--sand));transition:width .2s}
-.layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:16px;margin-top:16px;align-items:start}
-.sidebar{position:sticky;top:12px;display:grid;gap:12px}
-.side-card{padding:15px}
-.side-card h3{margin:0 0 7px;color:var(--forest)}
-.stage-nav{display:grid;gap:6px}
-.stage-nav button{text-align:right;border:1px solid transparent;background:transparent;padding:9px;border-radius:10px;color:#52635a;display:flex;gap:9px;align-items:center;font-size:.9rem}
-.stage-nav button.active{background:var(--mint);border-color:#d5e4d8;color:var(--forest);font-weight:700}
-.num{width:26px;height:26px;display:grid;place-items:center;background:#eef2ed;border-radius:8px;flex-shrink:0}
-.stage-nav button.active .num{background:var(--green);color:white}
-.main-card{padding:clamp(16px,3vw,28px);min-height:400px}
-.stage-meta{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:.83rem}
-.stage-title{font-size:clamp(1.35rem,3vw,1.9rem);color:var(--forest);margin:5px 0 8px;line-height:1.4}
-.intro{margin:0 0 18px;color:#56665d}
-.section-title{font-size:1.03rem;color:var(--forest);margin:22px 0 8px;display:flex;align-items:center;gap:8px}
-.section-title:before{content:"";width:5px;height:20px;border-radius:5px;background:var(--sand)}
-.checklist{display:grid;gap:8px}
-.check-row{display:flex;align-items:flex-start;gap:10px;background:#fafbf9;border:1px solid #e7ece7;padding:10px 12px;border-radius:12px}
-.check-row input{accent-color:var(--green);width:18px;height:18px;margin-top:5px;flex-shrink:0}
-.check-row.done span{text-decoration:line-through;color:#849087}
-.dua{border:1px solid var(--line);border-radius:15px;padding:14px;margin:10px 0;background:#fff}
-.dua-label{font-size:.8rem;color:var(--muted);font-weight:700}
-.arabic{font-size:1.15rem;line-height:2.1;color:#174b39;font-weight:650;white-space:pre-line;margin:9px 0}
-.meaning{font-size:.9rem;color:var(--muted);white-space:pre-line}
-.mini-btn{border:1px solid #dce6de;background:#f3f7f3;color:var(--forest);border-radius:9px;padding:7px 11px;font-size:.85rem}
-.note{background:#fff7e7;border:1px solid #f0dfbd;border-right:4px solid var(--sand);border-radius:12px;padding:12px 14px;margin:14px 0;font-size:.91rem}
-.nav-actions{display:flex;justify-content:space-between;gap:8px;margin-top:24px;padding-top:16px;border-top:1px solid var(--line)}
-.nav-actions button{border:0;border-radius:10px;padding:10px 12px;background:var(--green);color:#fff}
-.nav-actions .back{background:#edf2ed;color:var(--forest)}
-.nav-actions button:disabled{opacity:.35;cursor:default}
-.counter{border:1px solid var(--line);border-radius:16px;padding:13px;margin:10px 0;background:#fbfcfa}
-.counter-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.counter-name{font-weight:800;color:var(--forest)}
-.counter-number{font-size:2rem;font-weight:800;color:var(--green);font-variant-numeric:tabular-nums}
-.counter-controls{display:flex;gap:8px;align-items:center;margin:8px 0}
-.counter-controls button{border:0;border-radius:10px;width:43px;height:42px;font-size:1.25rem;background:var(--green);color:white}
-.counter-controls .reset{background:#edf1ed;color:#51635a;font-size:.85rem;width:auto;padding:0 12px}
-.counter-controls button:disabled{opacity:.3}
+.track{height:9px;background:#e9eee9;border-radius:20px;overflow:hidden;margin-top:10px}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--sand));transition:width .2s}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:15px;align-items:start}
+.sidebar{position:sticky;top:10px}
+.stage-nav{display:grid;gap:5px}
+.stage-nav button{border:1px solid transparent;border-radius:10px;padding:9px;background:transparent;text-align:right;color:#52635a;display:flex;align-items:center;gap:8px}
+.stage-nav button.active{background:var(--mint);border-color:#d5e4d8;color:var(--forest);font-weight:bold}
+.stage-nav button:disabled{opacity:.45}
+.num{min-width:27px;height:27px;border-radius:8px;background:#eef2ed;display:grid;place-items:center}
+.active .num{background:var(--green);color:white}
+.stage-meta{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:.84rem}
+h2{color:var(--forest);line-height:1.4}
+h3{color:var(--forest);font-size:1.06rem;margin:22px 0 8px}
+.intro{color:#52635a}
+.note,.reminder{padding:13px 15px;border-radius:12px;margin:13px 0}
+.note{background:#fff7e7;border-right:4px solid var(--sand)}
+.reminder{background:#edf5ef;border-right:4px solid var(--green)}
+.source{font-size:.82rem;color:var(--muted);margin-top:7px}
+.dua{border:1px solid var(--line);border-radius:13px;padding:13px;margin:10px 0}
+.dua-label{font-weight:bold;color:var(--forest)}
+.arabic{font-size:1.12rem;line-height:2.1;white-space:pre-line;margin:8px 0;color:#174b39}
+.meaning{font-size:.9rem;color:var(--muted)}
+.mini-btn{border:1px solid #dce6de;background:#f3f7f3;color:var(--forest);border-radius:9px;padding:7px 12px}
+.counter{border:1px solid var(--line);border-radius:14px;padding:14px;margin:15px 0;background:#fbfcfa}
+.counter-head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.counter-number{font-size:2rem;font-weight:bold;color:var(--green)}
+.counter-controls{display:flex;gap:8px;margin:8px 0}
+.counter-controls button{width:44px;height:42px;border:0;border-radius:9px;background:var(--green);color:white;font-size:1.2rem}
+.counter-controls .reset{width:auto;background:#edf1ed;color:#52635a;font-size:.9rem;padding:0 12px}
 .counter-help{font-size:.83rem;color:var(--muted)}
+.check-area{margin-top:28px;padding-top:18px;border-top:2px dashed var(--line)}
+.check-row{display:flex;align-items:flex-start;gap:10px;border:1px solid #e7ece7;background:#fafbf9;border-radius:11px;padding:11px;margin:8px 0}
+.check-row input{width:19px;height:19px;accent-color:var(--green);margin-top:6px;flex-shrink:0}
+.check-row.done span{text-decoration:line-through;color:#849087}
+.gate{font-size:.88rem;color:#7c6440;background:#fff7e7;border-radius:10px;padding:10px;margin-top:12px}
+.nav-actions{display:flex;justify-content:space-between;gap:8px;margin-top:18px;padding-top:15px;border-top:1px solid var(--line)}
+.nav-actions button{border:0;border-radius:10px;padding:10px 13px;background:var(--green);color:white}
+.nav-actions .back{background:#edf2ed;color:var(--forest)}
 .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#173e31;color:white;padding:10px 16px;border-radius:12px;z-index:10;display:none;max-width:90%;text-align:center}
-footer{text-align:center;padding:26px 12px;color:var(--muted);font-size:.83rem}
-@media(max-width:800px){.layout{grid-template-columns:1fr}.sidebar{position:static}.stage-nav{display:flex;overflow-x:auto;padding-bottom:4px}.stage-nav button{white-space:nowrap;flex-shrink:0}.side-card{display:none}.main-card{min-height:0}.nav-actions button{padding:9px 10px}}
-@media print{.sidebar,.nav-actions,.counter-controls,.toast{display:none!important}.hero{background:#123e32!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.layout{display:block}.main-card,.progress-card{box-shadow:none}}
+footer{text-align:center;padding:25px;color:var(--muted);font-size:.85rem}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.sidebar{position:static}.stage-nav{display:flex;overflow-x:auto}.stage-nav button{flex-shrink:0;white-space:nowrap}.sidebar .card{padding:12px}.main-card{min-width:0}.nav-actions button{padding:9px 10px}}
+@media print{.sidebar,.nav-actions,.counter-controls,.mini-btn,.gate,.toast{display:none!important}.layout{display:block}.card{box-shadow:none}.hero{background:#123e32!important;color:white!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 </style>
 </head>
 <body>
@@ -72,41 +68,34 @@ footer{text-align:center;padding:26px 12px;color:var(--muted);font-size:.83rem}
 <div class="hero-inner">
 <div class="eyebrow">دليل المناسك • رفيقك في رحلة العمرة</div>
 <h1>رفيق العمرة</h1>
-<p>خطوة بخطوة من الميقات إلى التحلل. اقرأ المناسك والأذكار، وتابع أشواط الطواف والسعي.</p>
-<div class="hero-stats">
-<span class="stat">٨ مراحل منظمة</span>
-<span class="stat">أذكار قابلة للنسخ</span>
-<span class="stat">عداد الطواف والسعي</span>
-</div>
+<p>تعلم المناسك خطوة بخطوة. اقرأ الشرح والأذكار، وأكمل التحقق قبل الانتقال إلى المرحلة التالية.</p>
 </div>
 </header>
 
 <div class="container">
-<section class="progress-card">
-<div class="progress-head"><strong id="progressText">أنجزت 0 من 8 مراحل</strong><span id="progressPct">0%</span></div>
-<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+<section class="card">
+<div class="progress-head"><strong id="progressText">أنجزت 0 من 8 مراحل</strong><strong id="progressPct">0%</strong></div>
+<div class="track"><div class="fill" id="progressFill"></div></div>
+<p id="progressHint" style="font-size:.85rem;color:#718078;margin-bottom:0">لا تُحتسب المرحلة إلا بعد إكمال التحقق والضغط على «التالي».</p>
 </section>
 
 <div class="layout">
-<main class="main-card" id="content" aria-live="polite"></main>
 <aside class="sidebar">
-<section class="side-card">
-<h3>مراحل العمرة</h3>
+<section class="card">
+<h3 style="margin-top:0">مراحل العمرة</h3>
 <nav class="stage-nav" id="stageNav"></nav>
 </section>
-<section class="side-card">
-<h3>تذكير فقهي</h3>
-<p style="margin:0;font-size:.88rem">لا يوجد دعاء مخصوص ثابت لكل شوط من الطواف أو السعي. ادعُ بما تيسر، ولا تزاحم أو تؤذِ أحدًا.</p>
+<section class="card">
+<h3 style="margin-top:0">تذكير مهم</h3>
+<p style="font-size:.88rem;margin-bottom:0">الرفق بالناس وتجنب المزاحمة من حسن أداء النسك. اتبع تعليمات الجهات المنظمة للحرم.</p>
 </section>
-<section class="side-card">
+<section class="card">
 <button class="mini-btn" onclick="window.print()" style="width:100%">طباعة / حفظ PDF</button>
-<button class="mini-btn" onclick="resetAll()" style="width:100%;margin-top:7px">إعادة ضبط التقدم والعدادات</button>
+<button class="mini-btn" onclick="resetAll()" style="width:100%;margin-top:8px">إعادة ضبط كل شيء</button>
 </section>
 </aside>
-</div>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
-<button class="mini-btn" onclick="window.print()">طباعة / حفظ PDF</button>
-<button class="mini-btn" onclick="resetAll()">إعادة ضبط كل شيء</button>
+
+<main id="content" class="card main-card" aria-live="polite"></main>
 </div>
 </div>
 
@@ -116,74 +105,140 @@ footer{text-align:center;padding:26px 12px;color:var(--muted);font-size:.83rem}
 <script>
 const stages = [
 {
-title:"الاستعداد قبل العمرة",
-intro:"جدد النية لله تعالى، وتب إليه، وتعلم المناسك. النية محلها القلب ولا يلزم التلفظ بها.",
-checks:["أتوب إلى الله وأرد الحقوق ما استطعت.","أجهز ملابس الإحرام أو الملابس الساترة.","أعرف الميقات الذي سأمر به وأستعد قبل تجاوزه."],
-note:"ليس شرطًا أن تكون خاليًا من الذنوب لتؤدي العمرة؛ اجعلها بابًا للتوبة.",
-duas:[]
+title:"1. الاستعداد قبل العمرة",
+intro:"ابدأ بإخلاص النية لله، والتوبة، ورد الحقوق قدر استطاعتك. تعلم أحكام الإحرام والميقات قبل السفر.",
+explanation:"العمرة عبادة تتكون من الإحرام، والطواف، والسعي، ثم الحلق أو التقصير. خطط للوصول إلى الميقات قبل تجاوزه، ولا تؤخر الإحرام حتى تتجاوزه وأنت تريد العمرة.",
+reminder:"قال الله تعالى: «وَتَزَوَّدُوا فَإِنَّ خَيْرَ الزَّادِ التَّقْوَى» (البقرة: 197). ومن الاستعداد النافع تعلم أحكام النسك والاستعداد للرفق بالناس.",
+source:"القرآن الكريم: سورة البقرة، الآية 197.",
+duas:[],
+checks:[
+"أخلص النية لله وأستحضر أن العمرة عبادة.",
+"أتعرف على الميقات الذي سأمر به وأستعد قبل الوصول إليه.",
+"أجهز احتياجات السفر وأتعلم ترتيب المناسك.",
+"أراجع أحكام الإحرام الخاصة بالرجل أو المرأة."
+]
 },
 {
-title:"الميقات والإحرام",
-intro:"الإحرام هو الدخول في النسك بالنية، وليس مجرد لبس الملابس. يستحب الاغتسال والتنظف قبل الإحرام.",
-checks:["أغتسل وألبس ملابس الإحرام قبل الميقات.","أنوي الدخول في العمرة.","أبدأ التلبية وأستمر بها حتى أبدأ الطواف."],
+title:"2. الميقات والإحرام",
+intro:"الإحرام هو نية الدخول في النسك. يستحب الاغتسال والتنظف قبل الإحرام، ثم تنوي العمرة عند الميقات وتلبي.",
+explanation:"يجوز الاغتسال ولبس ملابس الإحرام قبل الوصول إلى الميقات. الرجل يلبس إزارًا ورداءً، والمرأة تلبس لباسها الساتر المعتاد دون تخصيص لون. لا تلبس المرأة النقاب والقفازين حال الإحرام، مع مراعاة أحكام الستر أمام الرجال الأجانب.",
+reminder:"قال الله تعالى: «وَأَتِمُّوا الْحَجَّ وَالْعُمْرَةَ لِلَّهِ» (البقرة: 196). وعند الدخول في النسك تقول: لبيك اللهم عمرة.",
+source:"القرآن الكريم: سورة البقرة، الآية 196. وتفاصيل الإحرام في كتب السنة والفقه.",
 duas:[
-["التلبية","لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ.","أجبت دعوتك يا الله، وأقبلت إليك؛ الحمد والنعمة والملك لك وحدك."]
+{title:"التلبية",text:"لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ.",meaning:"تلبية النبي ﷺ الواردة في السنة."},
+{title:"عند نية الدخول في العمرة",text:"لَبَّيْكَ اللَّهُمَّ عُمْرَةً.",meaning:"صيغة مشروعة لإعلان الدخول في النسك؛ محل النية القلب."}
 ],
-note:"الرجل يرفع صوته بالتلبية دون إزعاج، والمرأة تلبي بصوت منخفض. توقف التلبية عند بدء الطواف."
+checks:[
+"أغتسل وأتنظف إن تيسر قبل الإحرام.",
+"ألبس لباس الإحرام المناسب.",
+"أنوي الدخول في العمرة عند الميقات.",
+"أبدأ التلبية وأكررها حتى أبدأ الطواف.",
+"أتجنب محظورات الإحرام."
+]
 },
 {
-title:"دخول المسجد الحرام",
-intro:"ادخل بالقدم اليمنى. إن كنت قادرًا على الطواف فابدأ به؛ الطواف يجزئ عن تحية المسجد. لا تزاحم.",
-checks:["أدخل بالقدم اليمنى.","أقول دعاء دخول المسجد.","أتوجه للطواف مباشرة إذا تيسر."],
+title:"3. دخول المسجد الحرام",
+intro:"ادخل المسجد بالقدم اليمنى، وقل دعاء دخول المسجد. حافظ على الهدوء ولا تزاحم للوصول إلى مكان معين.",
+explanation:"إذا كنت مستعدًا للطواف، فتوجه إليه. لا يوجد دعاء مخصوص ثابت يجب قوله عند رؤية الكعبة، ولا يلزم أن تبدأ العمرة بعبارات معينة غير ما ورد في السنة.",
+reminder:"من دعاء دخول المسجد الوارد في السنة أن تسأل الله الرحمة. واجعل الرفق بالناس حاضرًا في كل خطوة.",
+source:"صحيح مسلم: دعاء دخول المسجد. لا يثبت دعاء مخصوص عند رؤية الكعبة.",
 duas:[
-["دعاء دخول المسجد","بِسْمِ اللَّهِ، وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ، اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ.","اللهم افتح لي أبواب رحمتك."]
+{title:"دعاء دخول المسجد",text:"بِسْمِ اللَّهِ، وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ، اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ.",meaning:"من الأذكار الواردة عند دخول المسجد."}
 ],
-note:"لا يوجد دعاء مخصوص ثابت عند رؤية الكعبة."
+checks:[
+"أدخل المسجد بالقدم اليمنى.",
+"أقول دعاء دخول المسجد.",
+"أحافظ على الهدوء وأتجنب المزاحمة.",
+"أتوجه للطواف إذا تيسر."
+]
 },
 {
-title:"الطواف حول الكعبة",
-intro:"طُف سبعة أشواط. يبدأ كل شوط وينتهي بمحاذاة الحجر الأسود، والكعبة على يسارك. تجنب إيذاء الآخرين.",
-checks:["أبدأ من الحجر الأسود وأقول: الله أكبر.","أكمل سبعة أشواط والكعبة على يساري.","لا أزاحم لتقبيل الحجر؛ أشير إليه عند تعذر الوصول.","أدعو وأذكر الله بما تيسر."],
+title:"4. الطواف حول الكعبة",
+intro:"تطوف سبعة أشواط، تبدأ بمحاذاة الحجر الأسود وتنتهي عنده، وتكون الكعبة على يسارك.",
+explanation:"ابدأ كل شوط بمحاذاة الحجر الأسود. إذا تعذر الوصول إليه فلا تزاحم الناس؛ أشر إليه وكبّر. استلم الركن اليماني إن تيسر دون مزاحمة، ولا يشرع استلام بقية أركان الكعبة. ادعُ بما تيسر، ولا تخصص لكل شوط دعاءً لا دليل عليه.",
+reminder:"قال الله تعالى: «وَلْيَطَّوَّفُوا بِالْبَيْتِ الْعَتِيقِ» (الحج: 29). وبين الركن اليماني والحجر الأسود ورد دعاء: «ربنا آتنا في الدنيا حسنة...»",
+source:"القرآن الكريم: سورة الحج، الآية 29. والأذكار الواردة في الطواف في كتب السنة.",
 counter:"tawaf",
 duas:[
-["عند محاذاة الحجر الأسود","اللَّهُ أَكْبَرُ","يمكن قول: بسم الله والله أكبر."],
-["بين الركن اليماني والحجر الأسود","رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً، وَفِي الْآخِرَةِ حَسَنَةً، وَقِنَا عَذَابَ النَّارِ.","دعاء مأثور في هذا الموضع."],
-["أذكار عامة للطواف","أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ.\nسُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ.\nاللَّهُمَّ اغْفِرْ لِي وَارْحَمْنِي وَاهْدِنِي وَعَافِنِي وَارْزُقْنِي.","لا يوجد دعاء إلزامي مختلف لكل شوط. اقرأ القرآن أو ادعُ لنفسك وأهلك."]
+{title:"عند محاذاة الحجر الأسود",text:"اللَّهُ أَكْبَرُ.",meaning:"يكبر عند محاذاة الحجر الأسود في بداية الشوط. ولا يلزم الوصول إليه أو لمسه."},
+{title:"بين الركن اليماني والحجر الأسود",text:"رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً، وَفِي الْآخِرَةِ حَسَنَةً، وَقِنَا عَذَابَ النَّارِ.",meaning:"دعاء وارد في هذا الموضع."},
+{title:"أذكار عامة",text:"سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ.\nأَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ.",meaning:"اذكر الله وادعه بما تحتاج إليه؛ لا يوجد دعاء مخصوص ثابت لكل شوط."}
+],
+checks:[
+"أبدأ من محاذاة الحجر الأسود وأكبر.",
+"أكمل سبعة أشواط والكعبة على يساري.",
+"أتجنب مزاحمة الناس أو إيذاءهم.",
+"أذكر الله وأدعو بما تيسر.",
+"أتأكد من عدد الأشواط قبل إنهاء الطواف."
 ]
 },
 {
-title:"ركعتا الطواف وزمزم",
-intro:"بعد إتمام الطواف، صل ركعتين حيث يتيسر، والأفضل خلف مقام إبراهيم إذا لم تزاحم. ثم اشرب زمزم إن تيسر.",
-checks:["أصلي ركعتين في مكان مناسب.","أقرأ الفاتحة وما تيسر من القرآن.","أشرب زمزم وأحمد الله."],
+title:"5. ركعتا الطواف وماء زمزم",
+intro:"بعد الطواف صل ركعتين حيث يتيسر دون مزاحمة، ثم اشرب من ماء زمزم إن تيسر.",
+explanation:"يستحب أن تصلي ركعتين بعد الطواف. الصلاة خلف مقام إبراهيم أفضل إذا أمكن دون إيذاء الآخرين أو تعطيل حركتهم. لا يلزم دعاء معين بعد الركعتين، ويمكنك الدعاء بما تحب.",
+reminder:"قال الله تعالى: «وَاتَّخِذُوا مِنْ مَقَامِ إِبْرَاهِيمَ مُصَلًّى» (البقرة: 125). احرص على الصلاة في مكان لا يعرقل الطائفين.",
+source:"القرآن الكريم: سورة البقرة، الآية 125.",
 duas:[
-["دعاء عام","اللَّهُمَّ تَقَبَّلْ مِنِّي وَاغْفِرْ لِي.","يمكنك الدعاء بما تيسر؛ لا يلزم دعاء محدد."]
+{title:"دعاء عام",text:"اللَّهُمَّ تَقَبَّلْ مِنِّي وَاغْفِرْ لِي.",meaning:"دعاء عام، وليس صيغة واجبة مخصوصة بعد ركعتي الطواف."}
+],
+checks:[
+"أصلي ركعتين في مكان مناسب إن تيسر.",
+"أتجنب تعطيل حركة الطائفين.",
+"أشرب من زمزم إن تيسر.",
+"أحمد الله وأدعو بما أحب."
 ]
 },
 {
-title:"السعي بين الصفا والمروة",
-intro:"ابدأ من الصفا وانته عند المروة. الذهاب من الصفا للمروة شوط، والعودة شوط آخر؛ سبعة أشواط، والنهاية عند المروة.",
-checks:["أتجه إلى الصفا وأقرأ: إن الصفا والمروة من شعائر الله.","أقول: أبدأ بما بدأ الله به.","أذكر الله وأدعو على الصفا والمروة.","أكمل سبعة أشواط؛ أسرع الرجل بين العلامتين الخضراوين إذا تيسر بلا أذى."],
+title:"6. السعي بين الصفا والمروة",
+intro:"يبدأ السعي من الصفا وينتهي بالمروة. الذهاب من الصفا إلى المروة شوط، والعودة من المروة إلى الصفا شوط آخر؛ المجموع سبعة أشواط.",
+explanation:"ابدأ بالصفا، وعند الاقتراب منه اقرأ الآية الواردة. يستقبل الساعي القبلة ويذكر الله ويدعو. يسرع الرجل بين العلامتين الخضراوين إذا تيسر دون أذى، أما المرأة فتمشي مشيًا عاديًا.",
+reminder:"قال الله تعالى: «إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ» (البقرة: 158). وقد ورد ذكر مخصوص يقوله النبي ﷺ على الصفا والمروة.",
+source:"القرآن الكريم: سورة البقرة، الآية 158، وحديث جابر في صفة حجة النبي ﷺ في صحيح مسلم.",
 counter:"sai",
 duas:[
-["الآية عند الصفا","إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ.",""],
-["الذكر على الصفا والمروة","اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ.\nلَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.\nلَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ، أَنْجَزَ وَعْدَهُ، وَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزَابَ وَحْدَهُ.","قل الذكر وادعُ بينه. لا يلزم دعاء مخصوص أثناء المشي."],
-["دعاء أثناء السعي","اللَّهُمَّ اغْفِرْ لِي وَارْحَمْنِي وَاهْدِنِي وَعَافِنِي وَارْزُقْنِي.\nرَبِّ اغْفِرْ وَارْحَمْ، إِنَّكَ أَنْتَ الْأَعَزُّ الْأَكْرَمُ.","المرأة تمشي مشيًا عاديًا. الرجل لا يهرول إن كان ذلك يؤذي أحدًا."]
+{title:"الآية عند الصفا",text:"إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ.",meaning:"تقرأ الآية عند الاقتراب من الصفا في بداية السعي."},
+{title:"الذكر على الصفا والمروة",text:"اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ.\nلَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.\nلَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ، أَنْجَزَ وَعْدَهُ، وَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزَابَ وَحْدَهُ.",meaning:"من الذكر الوارد في حديث جابر في صحيح مسلم. يكرر الذكر ويدعو، ولا يلزم الدعاء نفسه أثناء المشي."},
+{title:"دعاء عام أثناء السعي",text:"رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً، وَفِي الْآخِرَةِ حَسَنَةً، وَقِنَا عَذَابَ النَّارِ.",meaning:"يجوز الدعاء بهذا وغيره من الأدعية المشروعة."}
+],
+checks:[
+"أبدأ من الصفا وأنتهي عند المروة.",
+"أحسب الذهاب شوطًا والعودة شوطًا.",
+"أكمل سبعة أشواط وأنتهي عند المروة.",
+"أذكر الله وأدعو بما تيسر.",
+"أتجنب المزاحمة وأراعي كبار السن والضعفاء."
 ]
 },
 {
-title:"الحلق أو التقصير",
-intro:"بعد السعي يتحلل الرجل بحلق الرأس أو تقصيره، والحلق أفضل. المرأة تقص من أطراف شعرها قدرًا يسيرًا ولا تحلق.",
-checks:["الرجل: أحلق الرأس كاملًا أو أقصر من جميع الرأس.","المرأة: تقص من أطراف الشعر قدرًا يسيرًا.","أتحقق من إتمام الحلق أو التقصير قبل التحلل."],
+title:"7. الحلق أو التقصير",
+intro:"بعد السعي يحلق الرجل شعر رأسه أو يقصره، والحلق أفضل. أما المرأة فتقص من أطراف شعرها قدرًا يسيرًا ولا تحلق.",
+explanation:"ينبغي للرجل الذي يقصر أن يعم شعر الرأس بالتقصير، لا أن يأخذ من جهة واحدة فقط. المرأة تقص من أطراف شعرها مقدارًا يسيرًا. بعد إتمام الحلق أو التقصير ينتهي الإحرام.",
+reminder:"ثبت في السنة دعاء النبي ﷺ للمحلقين بالرحمة والمغفرة، ثم دعا للمقصرين. وهذا يدل على فضل الحلق للرجل.",
+source:"صحيح البخاري وصحيح مسلم: الدعاء للمحلقين والمقصرين.",
 duas:[
-["دعاء مقترح","اللَّهُمَّ تَقَبَّلْ مِنِّي، وَاغْفِرْ لِي، وَاجْعَلْنِي مِنَ الْمَقْبُولِينَ.","لا يوجد دعاء مخصوص ثابت للحلق أو التقصير."]
+{title:"دعاء عام",text:"اللَّهُمَّ تَقَبَّلْ مِنِّي وَاغْفِرْ لِي.",meaning:"دعاء عام، ولا يثبت ذكر مخصوص لازم عند الحلق أو التقصير."}
+],
+checks:[
+"الرجل يحلق رأسه أو يقصر شعر الرأس كله.",
+"المرأة تقص من أطراف شعرها قدرًا يسيرًا.",
+"أتأكد من إتمام الحلق أو التقصير.",
+"لا أتحلل قبل إتمام الحلق أو التقصير."
 ]
 },
 {
-title:"اكتمال العمرة",
-intro:"بعد الحلق أو التقصير تنتهي العمرة وتتحلل من الإحرام. احمد الله على التوفيق، وواصل الصلاة والذكر والعمل الصالح.",
-checks:["أتحلل من الإحرام بعد الحلق أو التقصير.","أحمد الله وأدعو بالقبول.","أحافظ على الصلاة والذكر وأتجنب إيذاء الآخرين."],
+title:"8. اكتمال العمرة",
+intro:"بعد إتمام الطواف والسعي والحلق أو التقصير تكون العمرة قد اكتملت، ويخرج المعتمر من الإحرام.",
+explanation:"احمد الله على التيسير، وأكثر من الدعاء والعمل الصالح. لا يلزم دعاء ختامي مخصوص، ولا يعني انتهاء العمرة انتهاء العبادة؛ حافظ على الصلاة والخلق الحسن.",
+reminder:"قال الله تعالى: «فَإِذَا فَرَغْتَ فَانْصَبْ ۝ وَإِلَىٰ رَبِّكَ فَارْغَبْ» (الشرح: 7-8).",
+source:"القرآن الكريم: سورة الشرح، الآيتان 7-8.",
 duas:[
-["دعاء جامع","اللَّهُمَّ تَقَبَّلْ عُمْرَتِي، وَاغْفِرْ ذَنْبِي، وَارْحَمْ ضَعْفِي، وَأَصْلِحْ قَلْبِي، وَاهْدِنِي إِلَى صِرَاطِكَ الْمُسْتَقِيمِ.\nاللَّهُمَّ اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ، الْأَحْيَاءِ مِنْهُمْ وَالْأَمْوَاتِ.\nاللَّهُمَّ ارْزُقْنِي حُسْنَ الْخَاتِمَةِ وَالْجَنَّةَ.","آمين يا رب العالمين."]
+{title:"دعاء جامع",text:"رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً، وَفِي الْآخِرَةِ حَسَنَةً، وَقِنَا عَذَابَ النَّارِ.\nاللَّهُمَّ اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ.",meaning:"دعاء مشروع بمعانٍ صحيحة، وليس دعاءً مخصوصًا ثابتًا لإنهاء العمرة."}
+],
+checks:[
+"أكملت سبعة أشواط في الطواف.",
+"أكملت سبعة أشواط في السعي.",
+"أتممت الحلق أو التقصير.",
+"أتحقق من اكتمال النسك وأحمد الله على التيسير.",
+"أعزم على المحافظة على الصلاة والعمل الصالح."
 ]
 }
 ];
@@ -211,7 +266,28 @@ const el=document.getElementById("toast");
 el.textContent=message;
 el.style.display="block";
 clearTimeout(window.toastTimer);
-window.toastTimer=setTimeout(()=>el.style.display="none",2200);
+window.toastTimer=setTimeout(()=>el.style.display="none",2400);
+}
+
+function checkKey(stageIndex,checkIndex){
+return "umrah_check_"+stageIndex+"-"+checkIndex;
+}
+
+function isChecked(stageIndex,checkIndex){
+try{return localStorage.getItem(checkKey(stageIndex,checkIndex))==="1";}
+catch(e){return false;}
+}
+
+function allChecksDone(stageIndex){
+return stages[stageIndex].checks.every((_,i)=>isChecked(stageIndex,i));
+}
+
+function canAccess(index){
+if(index===0)return true;
+for(let i=0;i<index;i++){
+if(!completed.has(i))return false;
+}
+return true;
 }
 
 function updateProgress(){
@@ -223,17 +299,17 @@ document.getElementById("progressFill").style.width=p+"%";
 }
 
 function counterHtml(type){
-const name=type==="tawaf"?"عداد الطواف":"عداد السعي";
+const title=type==="tawaf"?"عداد الطواف":"عداد السعي";
 const desc=type==="tawaf"
-?"كل شوط يبدأ وينتهي عند الحجر الأسود."
-:"الذهاب من الصفا إلى المروة شوط، والعودة شوط آخر. يبدأ من الصفا وينتهي عند المروة.";
+?"كل شوط يبدأ وينتهي بمحاذاة الحجر الأسود."
+:"الذهاب من الصفا إلى المروة شوط، والعودة شوط آخر.";
 return `<div class="counter">
-<div class="counter-head"><span class="counter-name">${name}</span><span class="counter-help">الهدف: 7</span></div>
-<div class="counter-head"><span class="counter-number" id="${type}Count">${counts[type]}</span><span>من 7 أشواط</span></div>
+<div class="counter-head"><strong>${title}</strong><span>الهدف: 7 أشواط</span></div>
+<div class="counter-head"><span class="counter-number" id="${type}Count">${counts[type]}</span><span>من 7</span></div>
 <div class="counter-controls">
 <button id="${type}Minus" aria-label="إنقاص شوط">−</button>
 <button id="${type}Plus" aria-label="إضافة شوط">＋</button>
-<button class="reset" id="${type}Reset">إعادة</button>
+<button class="reset" id="${type}Reset">إعادة العداد</button>
 </div>
 <div class="counter-help">${desc}</div>
 </div>`;
@@ -247,12 +323,12 @@ el.textContent=counts[type];
 document.getElementById(type+"Minus").disabled=counts[type]===0;
 document.getElementById(type+"Plus").disabled=counts[type]===7;
 save();
-if(counts[type]===7)toast("أكملت 7 أشواط. تأكد من العدد قبل المتابعة.");
+if(counts[type]===7)toast("وصلت إلى 7 أشواط. راجع العدد الفعلي قبل المتابعة.");
 }
 document.getElementById(type+"Plus").onclick=()=>set(counts[type]+1);
 document.getElementById(type+"Minus").onclick=()=>set(counts[type]-1);
 document.getElementById(type+"Reset").onclick=()=>{
-if(confirm("إعادة عداد الأشواط إلى صفر؟"))set(0);
+if(confirm("هل تريد إعادة العداد إلى صفر؟"))set(0);
 };
 set(counts[type]);
 }
@@ -262,100 +338,175 @@ nav.innerHTML="";
 stages.forEach((stage,index)=>{
 const button=document.createElement("button");
 button.className=index===current?"active":"";
-button.innerHTML=`<span class="num">${completed.has(index)?"✓":index+1}</span><span>${stage.title}</span>`;
-button.onclick=()=>{current=index;render();};
+button.disabled=!canAccess(index);
+button.innerHTML=`<span class="num">${completed.has(index)?"✓":index+1}</span><span>${stage.title.replace(/^\d+\.\s*/,"")}</span>`;
+button.onclick=()=>{if(canAccess(index)){current=index;render();}};
 nav.appendChild(button);
 });
 
 const s=stages[current];
 content.innerHTML=`
-<div class="stage-meta"><span>المرحلة ${current+1} من ${stages.length}</span><span>${completed.has(current)?"✓ مكتملة":"قيد التنفيذ"}</span></div>
-<h2 class="stage-title">${s.title}</h2>
-<p class="intro">${s.intro}</p>`;
+<div class="stage-meta">
+<span>المرحلة ${current+1} من ${stages.length}</span>
+<span>${completed.has(current)?"✓ مكتملة":"قيد التنفيذ"}</span>
+</div>
+<h2>${s.title}</h2>
+<p class="intro">${s.intro}</p>
 
-if(s.note)content.innerHTML+=`<div class="note">${s.note}</div>`;
-if(s.counter)content.innerHTML+=counterHtml(s.counter);
+<h3>الشرح المبسط</h3>
+<p>${s.explanation}</p>
 
-content.innerHTML+='<h3 class="section-title">قائمة التحقق</h3><div class="checklist">'+
-s.checks.map((item,index)=>`<label class="check-row"><input type="checkbox" data-check="${current}-${index}"><span>${item}</span></label>`).join("")+
-'</div>';
+<h3>الأذكار والأدعية</h3>
+<div id="duasArea"></div>
 
-s.duas.forEach((dua,index)=>{
-content.innerHTML+=`<section class="dua">
-<div class="dua-label">${dua[0]}</div>
-<div class="arabic">${dua[1]}</div>
-${dua[2]?`<div class="meaning">${dua[2]}</div>`:""}
-<div style="margin-top:10px"><button class="mini-btn copy" data-copy="${index}">نسخ الذكر</button></div>
-</section>`;
-});
+<div class="reminder">
+<strong>تذكير من القرآن أو السنة</strong>
+<p>${s.reminder}</p>
+<div class="source">${s.source}</div>
+</div>
 
-content.querySelectorAll('input[type="checkbox"]').forEach(input=>{
-const key=input.dataset.check;
-input.checked=localStorage.getItem("umrah_check_"+key)==="1";
-if(input.checked)input.closest(".check-row").classList.add("done");
-input.onchange=()=>{
-try{localStorage.setItem("umrah_check_"+key,input.checked?"1":"0");}catch(e){}
-input.closest(".check-row").classList.toggle("done",input.checked);
-};
-});
+${s.counter?counterHtml(s.counter):""}
 
-content.querySelectorAll("[data-copy]").forEach(button=>{
-button.onclick=async()=>{
-const textToCopy=s.duas[Number(button.dataset.copy)][1];
-try{
-if(navigator.clipboard&&window.isSecureContext){
-await navigator.clipboard.writeText(textToCopy);
+<div class="check-area">
+<h3 style="margin-top:0">قائمة التحقق قبل الانتقال</h3>
+<p style="font-size:.9rem;color:#718078">علّم على كل بند بعد إتمامه. لن تُحتسب المرحلة ولن تستطيع الانتقال قبل إكمال القائمة.</p>
+<div class="checklist" id="checklist"></div>
+<div class="gate" id="gateMessage"></div>
+</div>
+
+<div class="nav-actions">
+<button class="back" id="prev" ${current===0?"disabled":""}>← السابقة</button>
+<button id="next" disabled>${current===stages.length-1?"إكمال العمرة ✓":"التالي ←"}</button>
+</div>`;
+
+const duasArea=document.getElementById("duasArea");
+if(!s.duas.length){
+duasArea.innerHTML='<p>لا توجد صيغة مخصوصة مطلوبة في هذه المرحلة. يمكنك الدعاء بما تيسر من الدعاء المشروع.</p>';
 }else{
-throw new Error("clipboard unavailable");
+s.duas.forEach((dua,index)=>{
+const section=document.createElement("section");
+section.className="dua";
+const title=document.createElement("div");
+title.className="dua-label";
+title.textContent=dua.title;
+const text=document.createElement("div");
+text.className="arabic";
+text.textContent=dua.text;
+section.appendChild(title);
+section.appendChild(text);
+if(dua.meaning){
+const meaning=document.createElement("div");
+meaning.className="meaning";
+meaning.textContent=dua.meaning;
+section.appendChild(meaning);
 }
-toast("تم نسخ الذكر");
-}catch(e){
-const area=document.createElement("textarea");
-area.value=textToCopy;
-area.style.position="fixed";
-area.style.opacity="0";
-document.body.appendChild(area);
-area.select();
+const copy=document.createElement("button");
+copy.className="mini-btn";
+copy.textContent="نسخ الذكر";
+copy.style.marginTop="10px";
+copy.onclick=()=>copyText(dua.text);
+section.appendChild(copy);
+duasArea.appendChild(section);
+});
+}
+
+const checklist=document.getElementById("checklist");
+s.checks.forEach((item,index)=>{
+const label=document.createElement("label");
+label.className="check-row";
+const input=document.createElement("input");
+input.type="checkbox";
+input.checked=isChecked(current,index);
+const span=document.createElement("span");
+span.textContent=item;
+if(input.checked)label.classList.add("done");
+input.onchange=()=>{
 try{
-const ok=document.execCommand("copy");
-toast(ok?"تم نسخ الذكر":"حدد النص وانسخه يدويًا");
-}catch(err){toast("حدد الذكر وانسخه يدويًا");}
-area.remove();
+localStorage.setItem(checkKey(current,index),input.checked?"1":"0");
+}catch(e){}
+label.classList.toggle("done",input.checked);
+if(!input.checked){
+completed.delete(current);
+save();
 }
+updateProgress();
+updateGate();
 };
+label.appendChild(input);
+label.appendChild(span);
+checklist.appendChild(label);
 });
 
 if(s.counter)bindCounter(s.counter);
 
-content.innerHTML+=`<div class="nav-actions">
-<button class="back" id="prev" ${current===0?"disabled":""}>← السابقة</button>
-<button id="mark">${completed.has(current)?"إلغاء إكمال المرحلة":"✓ إكمال المرحلة"}</button>
-<button id="next" ${current===stages.length-1?"disabled":""}>التالي ←</button>
-</div>`;
+function updateGate(){
+const done=allChecksDone(current);
+const next=document.getElementById("next");
+next.disabled=!done;
+document.getElementById("gateMessage").textContent=done
+?"اكتملت قائمة التحقق. اضغط على الزر للانتقال واحتساب إنجاز المرحلة."
+:"أكمل جميع البنود أعلاه لتفعيل زر الانتقال.";
+}
 
-document.getElementById("prev").onclick=()=>{current--;render();};
-document.getElementById("next").onclick=()=>{current++;render();};
-document.getElementById("mark").onclick=()=>{
-if(completed.has(current))completed.delete(current);
-else completed.add(current);
+updateGate();
+
+document.getElementById("prev").onclick=()=>{
+if(current>0){current--;render();}
+};
+
+document.getElementById("next").onclick=()=>{
+if(!allChecksDone(current)){
+toast("أكمل جميع بنود التحقق أولًا.");
+return;
+}
+completed.add(current);
 save();
+updateProgress();
+if(current<stages.length-1){
+current++;
 render();
+}else{
+render();
+toast("بارك الله فيك، أكملت مراحل دليل العمرة.");
+}
 };
 updateProgress();
 }
 
+async function copyText(text){
+try{
+if(navigator.clipboard&&window.isSecureContext){
+await navigator.clipboard.writeText(text);
+toast("تم نسخ الذكر.");
+return;
+}
+}catch(e){}
+const area=document.createElement("textarea");
+area.value=text;
+area.style.position="fixed";
+area.style.opacity="0";
+document.body.appendChild(area);
+area.select();
+let ok=false;
+try{ok=document.execCommand("copy");}catch(e){}
+area.remove();
+toast(ok?"تم نسخ الذكر.":"تعذر النسخ تلقائيًا؛ اضغط مطولًا على النص لنسخه.");
+}
+
 function resetAll(){
-if(!confirm("هل تريد مسح تقدم المراحل وقوائم التحقق والعدادات؟"))return;
+if(!confirm("هل تريد مسح كل التقدم وقوائم التحقق والعدادات؟"))return;
 completed.clear();
 counts={tawaf:0,sai:0};
 try{
 localStorage.removeItem("umrah_done");
 localStorage.removeItem("umrah_counts");
-Object.keys(localStorage).filter(key=>key.startsWith("umrah_check_")).forEach(key=>localStorage.removeItem(key));
+Object.keys(localStorage)
+.filter(key=>key.startsWith("umrah_check_"))
+.forEach(key=>localStorage.removeItem(key));
 }catch(e){}
 current=0;
 render();
-toast("تمت إعادة الضبط");
+toast("تمت إعادة الضبط.");
 }
 
 render();
